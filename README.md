@@ -1,2 +1,3 @@
 # codewars
-Personal Codewars Solutions 
+
+A repo of all of my Code Wars Solutions. 
