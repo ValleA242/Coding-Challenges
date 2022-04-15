@@ -12,3 +12,4 @@ Return True if you're better, else False!
 function betterThanAverage(classPoints, yourPoints) {
   return yourPoints > classPoints.reduce((a,b) => a + b, 0) / (classPoints.length) ? true : false
 }
+ betterThanAverage([88,70,60,65,80], 90)
