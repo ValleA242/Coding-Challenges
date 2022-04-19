@@ -12,9 +12,7 @@ let guest = prompt('')
 let guestList =['Johnny', 'Charlie', 'Kristin', 'Racheal']
 
 const bouncer = () => {
-    console.log(guestList.includes('Johnny'))
     return guestList.includes(guest) ? 'Welcome' : 'Leave'
-
 }
 
 console.log(bouncer())
