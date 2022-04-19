@@ -9,8 +9,7 @@ function fibonacciGenerator (n) {
     } else {
         fiboArr = [0, 1]
         for(let i = 1; i < n; i++){
-            if(i < n){
-                fiboArr.push(fiboArr[i] + fiboArr[i - 1])
+               fiboArr.push(fiboArr[i] + fiboArr[i - 1])
             }
         }
     }
