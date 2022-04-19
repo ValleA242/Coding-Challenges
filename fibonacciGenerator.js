@@ -10,7 +10,7 @@ function fibonacciGenerator (n) {
         return fiboArr
     } else {
         fiboArr = [0, 1]
-        for(let i = 1; i < n; i++){
+        for(let i = 1; i < n - 1; i++){
          fiboArr.push(fiboArr[i] + fiboArr[i - 1])
         }
     }
