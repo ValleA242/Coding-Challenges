@@ -54,4 +54,4 @@ var number = function(busStops){
   return sumOfEntering - sumOfExiting
 } 
 
-number([[10,0],[3,5],[5,8]])
+number([[10,5],[3,5],[5,8]])
