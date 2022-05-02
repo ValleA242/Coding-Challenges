@@ -15,7 +15,7 @@ function pigIt(str){
     indiLets[i].splice(0,2)  
     }
   
-  console.log(indiLets[1] + preForm[1])
+  console.log(indiLets[3].join('') + preForm[3])
   
 }
 
