@@ -30,3 +30,5 @@ function barista(coffees){
  
   }
 }
+
+barista([1,3,4,5])
