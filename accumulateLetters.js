@@ -2,7 +2,7 @@
 
 function accum(s) {
    s = s.toUpperCase();
-  let solutionArr = []
+  let solutionArr = [] //set solution array to push elements into
   let getArr = s.split('')
   let getArrLetters = getArr.map((ele) => {
     return [ele]})
