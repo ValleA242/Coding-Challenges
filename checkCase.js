@@ -13,9 +13,9 @@ same case, return 0
 
 
 function sameCase(a, b){
- if(a.toUpperCase() === a.toLowerCase() || b.toLowerCase() === b.toUpperCase()){
-    return -1
-  }else if(a === a.toLowerCase() && b === b.toLowerCase() || a === a.toUpperCase() && b === b.toUpperCase()){
+ if(a.toUpperCase() === a.toLowerCase() || b.toLowerCase() === b.toUpperCase()){ //If the case of characters are not the same
+    return -1 
+  }else if(a === a.toLowerCase() && b === b.toLowerCase() || a === a.toUpperCase() && b === b.toUpperCase()){ //if the case of characters are the same 
       return 1
   }else{
     return 0
