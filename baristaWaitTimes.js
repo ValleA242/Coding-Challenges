@@ -12,7 +12,7 @@ function barista(coffees){
  
   })
   
-  let dirtyArr = []
+  let dirtyArr = [] //array for dirty coffee cups
   
   for(let i = sortCoffee.length - 1; i >= 0; i--){
     
