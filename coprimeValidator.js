@@ -28,9 +28,8 @@ function isCoprime(x, y) {
         duplicateFactors.push(xFacts[i])
        }
      }
-   }console.log(xFacts)
-  console.log(yFacts)
-    console.log(duplicateFactors)
+   }
+  
     //if duplicate factors has a length of 0 and at the 0 index the number pushed is 1 that indicates the only duplicate factor the two arguments have is 1.  
     return (duplicateFactors.length === 1 && duplicateFactors[0] === 1) ? true : false  
   }
