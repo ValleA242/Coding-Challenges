@@ -1,3 +1,6 @@
+//Write a program to determine if the two given numbers are coprime. A pair of numbers are coprime if their greatest shared factor is 1.
+
+
 function isCoprime(x, y) {
   //set empty arrays to push factors into 
   let xFacts = []
@@ -5,14 +8,14 @@ function isCoprime(x, y) {
   let duplicateFactors = []
   
   //check for and push factors of x 
-  for(let i = 1; i < x; i++){
+  for(let i = 1; i <= x; i++){
     if(x % i === 0){
       xFacts.push(i)
     }  
   }
   
   //check for and push factors of y 
-  for(let i = 1; i < y; i++){
+  for(let i = 1; i <= y; i++){
     if(y % i === 0){
       yFacts.push(i)
     }  
@@ -25,8 +28,12 @@ function isCoprime(x, y) {
         duplicateFactors.push(xFacts[i])
        }
      }
-   } 
-
+   }console.log(xFacts)
+  console.log(yFacts)
+    console.log(duplicateFactors)
     //if duplicate factors has a length of 0 and at the 0 index the number pushed is 1 that indicates the only duplicate factor the two arguments have is 1.  
     return (duplicateFactors.length === 1 && duplicateFactors[0] === 1) ? true : false  
   }
+
+
+isCoprime(17, 34)
