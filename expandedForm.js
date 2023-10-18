@@ -14,7 +14,7 @@ let numArray = num.toString().split('');
 let numPlaceArray = [];
 
     for(let i = numArray.length; i > 0; i--){
-        if(i != 0){
+    if(i != 0){
             numPlaceArray.push(Math.pow(10, i - 1))
         } else {
             numPlaceArray.push(1)
@@ -24,6 +24,12 @@ let numPlaceArray = [];
   console.log(numArray)
     
  let newArray = numArray.map((x, index) => x * numPlaceArray[index]);
+    var finalExpandedForm = []
+    for(let i = 0; i < finalExpandedForm.length; i++){
+        if(newArray[i] != 0){
+        finalExpandedForm.push(newArray[i]);
+        }
+    }
     
-    return newArray.toString().replaceAll(',', ' + ').replaceAll(' 0 ', '').replaceAll('++', '+');
+    return finalExpandedForm.toString().split(',').replaceAll(',', ' + ');
 }
