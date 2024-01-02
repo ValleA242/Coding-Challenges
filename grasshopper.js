@@ -12,3 +12,7 @@
 // For example 2 is not a factor of 7 because: 7 % 2 = 1
 
 // Note: base is a non-negative number, factor is a positive number.
+
+const factorChecker = (base, factor) => {
+    return base % factor === 0 ? true : false;
+}
