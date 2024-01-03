@@ -13,6 +13,4 @@
 
 // Note: base is a non-negative number, factor is a positive number.
 
-const factorChecker = (base, factor) => {
-    return base % factor === 0 ? true : false;
-}
+const factorChecker = (base, factor) => { return base % factor === 0 ? true : false;}
