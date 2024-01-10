@@ -11,5 +11,5 @@
 // Given a number T from interval [1..2147483646], find if it is triangular number or not.
 
 const isTriangle = (n) => {
-    
+    return n * (n + 1) % 2 === 0? true : false;
 }
