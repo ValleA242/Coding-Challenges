@@ -35,3 +35,13 @@
 // len(sound_str) <= 1000
 // len(horses) <= 9 (random tests)
 // len(horses) <= 10 (trivial tests)
+
+const countHorses = (sound) => {
+    let indexArr = [];
+    let stepTotalArr = [];
+    sound.map((ele, index) => {
+        if(ele > 0){
+
+        }
+    })
+}
