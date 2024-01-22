@@ -40,12 +40,12 @@ const countHorses = (sound) => {
     let indexArr = [];
     let stepTotalArr = [];
     sound.map((ele, index) => {
-        if(ele > 0){
-            for(let i = 0; i < ele; i++){
+        if (ele > 0) {
+            for (let i = 0; i < ele; i++) {
                 indexArr.push(index)
             }
-            // indexArr.push(index)
-            // stepTotalArr.push(ele)
+            indexArr.push(index)
+            stepTotalArr.push(ele)
         }
     })
 
@@ -56,4 +56,4 @@ const countHorses = (sound) => {
 }
 
 
-countHorses([0,0,2,0,0,2,0,0,2,0,0,2,0])
+countHorses([0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0])
