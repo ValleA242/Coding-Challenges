@@ -37,8 +37,11 @@ function queueTime(customers, registers) {
         return totalTimeOneReg
     } else {
         //this handles intial available cashiers for available registers
-        const excludeNumberCustReg = customers.slice(registers, customers.length - (registers - 1));
-        return excludeNumberCustReg
+        customers.length = registers;
+        const totalMinimumTime = customers.reduce(function(acc, nextValue){
+            return acc + nextValue;
+        }, 0)
+        return totalMinimumTime
     }
 }
 
