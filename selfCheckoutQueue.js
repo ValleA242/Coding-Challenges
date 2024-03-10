@@ -37,11 +37,28 @@ function queueTime(customers, registers) {
         return totalTimeOneReg
     } else {
         //this handles intial available cashiers for available registers
-        customers.length = registers;
-        const totalMinimumTime = customers.reduce(function(acc, nextValue){
+        let currentCheckout = [];
+        currentCheckout.push(customers[customers.length - 1])
+        for(let i = 0; i < customers.length; i++){
+            if(customers[0] > customers[1]){
+                customers[0] = customers[0] - customers[1]
+                currentCheckout.push(customers[1])
+                customers.splice(1, 1)
+                console.log(currentCheckout)
+            } else {
+                customers[1] = customers[1] - customers[0]
+                currentCheckout.push(customers[0])
+                customers.splice(0, 1)
+                console.log(currentCheckout)
+            } 
+        }
+        
+        const totalTime = currentCheckout.reduce(function(acc, nextValue){
             return acc + nextValue;
         }, 0)
-        return totalMinimumTime
+        console.log(`this is current checkout: ${currentCheckout}`)
+        console.log(`orginal customer array: ${customers}`)
+        return totalTime
     }
 }
 
