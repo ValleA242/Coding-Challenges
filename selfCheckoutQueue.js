@@ -16,7 +16,7 @@
 
 // queueTime([10,2,3,3], 2)
 // // should return 10
-// // because here n=2 and the 2nd, 3rd, and 4th people in the 
+// // because here n=2 and the 2nd, 3rd, and 4th people in the
 // // queue finish before the 1st person has finished.
 
 // queueTime([2,3,10], 2)
@@ -30,37 +30,18 @@
 // P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
 
 function queueTime(customers, registers) {
-    if (registers === 1){
-        const totalTimeOneReg = customers.reduce(function(acc, nextValue){
-            return acc + nextValue;
-        }, 0);
-        return totalTimeOneReg
+    if (registers === 1) {
+      return customers.reduce((acc, time) => acc + time, 0);
     } else {
-        //this handles intial available cashiers for available registers
-        let currentCheckout = [];
-        currentCheckout.push(customers[customers.length - 1])
-        for(let i = 0; i < customers.length; i++){
-            if(customers[0] > customers[1]){
-                customers[0] = customers[0] - customers[1]
-                currentCheckout.push(customers[1])
-                customers.splice(1, 1)
-                console.log(currentCheckout)
-            } else {
-                customers[1] = customers[1] - customers[0]
-                currentCheckout.push(customers[0])
-                customers.splice(0, 1)
-                console.log(currentCheckout)
-            } 
-        }
-        
-        const totalTime = currentCheckout.reduce(function(acc, nextValue){
-            return acc + nextValue;
-        }, 0)
-        console.log(`this is current checkout: ${currentCheckout}`)
-        console.log(`orginal customer array: ${customers}`)
-        return totalTime
+      let checkouts = new Array(registers).fill(0);
+  
+      for (let i = 0; i < customers.length; i++) {
+        let minIndex = checkouts.indexOf(Math.min(...checkouts));
+        checkouts[minIndex] += customers[i];
+      }
+  
+      return Math.max(...checkouts);
     }
-}
+  }
 
-
-console.log(queueTime([2,3,10], 2))
+console.log(queueTime([2, 3, 10], 2));
