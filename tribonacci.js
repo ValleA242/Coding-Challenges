@@ -17,10 +17,24 @@
 // [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
 
 
-const tribonacci = (array, seq) => {
-    
+const tribonacci = (array, seq) => {    
+    if(seq === 0){
+        return [];
+    } else if(seq > 2){
+    for(let i = array.length - 3; i < array.length; i++){
+            if(array.length < seq){
+            array.push(array[i] + array[i + 1] + array[i + 2]);
+            
+            }
+        
+        }
+        return array;
+    } else {
+        const lessThanArray = []
+        for(let i = 0; i < seq; i++){
+            lessThanArray.push(array[i]);
+        }
+        return lessThanArray
+    }
 }
-
-
-console.log([1,2,3].length);
-// console.log(tribonacci([1,1,1], 10))
+tribonacci([1,1,1], 10)
