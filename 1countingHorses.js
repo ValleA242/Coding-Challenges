@@ -52,7 +52,7 @@ const countHorses = (sound) => {
 
 
     console.log(indexArr)
-    // console.log(stepTotalArr)
+    console.log(stepTotalArr)
 }
 
 
