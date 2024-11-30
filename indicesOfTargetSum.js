@@ -6,6 +6,11 @@
 // target will always be the sum of two different items from that array).
 
 function targetSum(array, target) {
+    const seen = new Map();
+
+    for (let i = 0; i < array.length; i++) {
+
+    }
 
 }
 
