@@ -14,6 +14,8 @@ function targetSum(array, target) {
         if (seen.has(complement)) {
             return [seen.get(complement), i];
         }
+
+        seen.set(numbers[i], i)
     }
 
 }
