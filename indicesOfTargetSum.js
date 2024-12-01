@@ -9,6 +9,8 @@ function targetSum(array, target) {
     const seen = new Map();
 
     for (let i = 0; i < array.length; i++) {
+        const complement = target - array[i];
+
 
     }
 
