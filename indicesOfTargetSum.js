@@ -11,7 +11,9 @@ function targetSum(array, target) {
     for (let i = 0; i < array.length; i++) {
         const complement = target - array[i];
 
-
+        if (seen.has(complement)) {
+            return [seen.get(complement), i];
+        }
     }
 
 }
