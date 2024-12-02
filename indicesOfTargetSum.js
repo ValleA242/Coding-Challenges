@@ -6,19 +6,19 @@
 // target will always be the sum of two different items from that array).
 
 function targetSum(array, target) {
-    const seen = new Map();
+
+    const seen = new Map(); //store new hash map in variable seen
 
     for (let i = 0; i < array.length; i++) {
-        const complement = target - array[i];
+        const difference = target - array[i]; //store hash map in difference variable
 
-        if (seen.has(complement)) {
-            return [seen.get(complement), i];
+        if (seen.has(difference)) { //verifies difference does not already exist in the map
+            return [seen.get(difference), i];
         }
 
-        seen.set(numbers[i], i)
+        seen.set(numbers[i], i) //insert current value at current idx to seen
     }
 
 }
 
-
-targetSum([2, 7, 11, 15], 9)
+targetSum([2, 7, 11, 15], 9);
