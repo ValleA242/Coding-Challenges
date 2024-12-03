@@ -13,7 +13,7 @@ function targetSum(array, target) {
         const difference = target - array[i]; //store hash map in difference variable
 
         if (seen.has(difference)) { //verifies difference does not already exist in the map
-            return [seen.get(difference), i];
+            return [seen.get(difference), i]; //if difference exist return difference and index of difference
         }
 
         seen.set(numbers[i], i) //insert current value at current idx to seen
