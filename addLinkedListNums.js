@@ -23,5 +23,10 @@ function addTwoNumbers(l1, l2) {
 
         tail.next = new ListNode(digit);
         tail = tail.next;
+
+        if (l1) l1 = l1.next;
+        if (l2) l2 = l2.next;
     }
+
+    return dummy.next;
 }
