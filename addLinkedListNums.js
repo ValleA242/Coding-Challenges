@@ -18,14 +18,14 @@ function addTwoNumbers(l1, l2) {
         const y = l2 ? l2.val : 0;
 
         const sum = x + y + carry;
-        carry = Math.floor(sum / 10);
-        const digit = sum % 10;
+        carry = Math.floor(sum / 10); //sets carry value 
+        const digit = sum % 10; //sets digit to be inserted into node 
 
-        tail.next = new ListNode(digit);
-        tail = tail.next;
+        tail.next = new ListNode(digit); //enters digit into constructor establishing node with value 
+        tail = tail.next; //moves tail forward so that it's pointing to the new last node 
 
-        if (l1) l1 = l1.next;
-        if (l2) l2 = l2.next;
+        if (l1) l1 = l1.next; //shifts l1 to the next node if pointer is not null
+        if (l2) l2 = l2.next; // shifts l2 to the next node if pointer is not null
     }
 
     return dummy.next;
